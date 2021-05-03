@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Real-time Stock Price Chart</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="Source/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Container containing the form for stock sign and buttons -->
+        <h1>Real-time Stock Price Chart</h1>
+        <form id="inputForm" onsubmit="return false" style="padding-bottom: 30px;">
+            <div class="form-group">
+                <label for="stockSign"><h5>Stock Sign</h5></label>
+                <input type="text" class="form-control" id="stockSign" placeholder="Stock Sign"/>
+                <p id="Error" style="color: red; padding-left: 10px;"></p>
+            </div>
+            <button type="button" class="btn btn-success" id="addStock">Add Stock</button>
+        </form>
+
+        <div class="row" id="dRow">
+            <div class="col-3" id="stockList" style="display: none">
+                <h5 class="text-center">Added Stocks List</h5>
+                <ol></ol>
+            </div>
+            <div id="chartContainer" class="col-7">
+                <canvas id="graph" width="100%" height="78%"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="Source/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+</body>
+
+</html>
