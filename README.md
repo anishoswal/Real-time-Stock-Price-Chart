@@ -1,2 +1,1 @@
-# Stock-Up
-Real-time Stock Price Chart
+# Real-time Stock Price Chart
